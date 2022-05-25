@@ -1,0 +1,75 @@
+.header {
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw;
+    transition: 300ms ease-in-out;
+    color: white;
+}
+
+.header.unstick{
+    background-color: white;
+}
+
+.header.unstick ul li a, .header.unstick span {
+    color: black;
+}
+
+.header.unstick ul li a:hover {
+    color: #ff7400;
+    align-items: flex-start;
+}
+
+.header.unstick ul li a:hover::after {
+    width: 100%;
+    background: #ff7400;
+}
+
+.header span {
+    font-family: 'Outfit';
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    transition: 150ms ease-in-out;
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    gap: 2vw;
+    list-style: none;
+}
+
+.header ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: white;
+    text-decoration: none;
+    transition: 150ms ease-in-out;
+}
+
+.header ul li a::after {
+    content: '';
+    width: 0%;
+    border-radius: 20px;
+    height: 2px;
+    transition: 150ms ease-in-out;
+    background-color: white;
+}
+
+.header ul li a:hover {
+    color: rgba(255, 217, 0, 1);
+    align-items: flex-start;
+}
+
+.header ul li a:hover::after {
+    width: 100%;
+    background: rgba(255, 217, 0, 1);
+}
